@@ -13,8 +13,8 @@ class ProfilerRoute{
         this.router.get('/',profileControlers.list);
         this.router.get('/:id',profileControlers.getOne);
         this.router.post('/',profileControlers.create);
-        this.router.put('/:id',profileControlers.update);
-        this.router.delete('/:id',profileControlers.delete);
+        //this.router.put('/:id',profileControlers.update);
+        //this.router.delete('/:id',profileControlers.delete);
     }
 }
 

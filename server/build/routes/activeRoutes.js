@@ -8,7 +8,8 @@ class ActiveRoute {
         this.config();
     }
     config() {
-        this.router.get('/', activeControler_1.activeControllers.index);
+        //this.router.get('/',activeControllers.index);
+        this.router.put('/:id', activeControler_1.activeControllers.delete);
     }
 }
 const activeRoutes = new ActiveRoute();

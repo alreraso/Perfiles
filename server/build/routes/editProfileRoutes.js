@@ -8,7 +8,8 @@ class EditProfileRoute {
         this.config();
     }
     config() {
-        this.router.get('/', editProfileControler_1.editProfileControllers.index);
+        //this.router.get('/',editProfileControllers.index);
+        this.router.put('/:id', editProfileControler_1.editProfileControllers.update);
     }
 }
 const editProfileRoutes = new EditProfileRoute();

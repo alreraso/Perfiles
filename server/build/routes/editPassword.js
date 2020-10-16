@@ -8,7 +8,8 @@ class EditPasswordRoute {
         this.config();
     }
     config() {
-        this.router.get('/', editPasswordControler_1.editPasswordControllers.index);
+        //this.router.get('/',editPasswordControllers.index);
+        this.router.put('/:id', editPasswordControler_1.editPasswordControllers.update);
     }
 }
 const editPasswordRoutes = new EditPasswordRoute();

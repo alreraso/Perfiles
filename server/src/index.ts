@@ -2,9 +2,6 @@ import express, { Application } from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
 
-//import indexRoutes from './routes/indexRoute';
-import indexRoutes from './routes/indexRoutes'
-import gamesRoutes from './routes/gamesRoutes';
 import profileRoutes from './routes/profileRoutes';
 import activeRoutes from './routes/activeRoutes';
 import editProfileRoutes from './routes/editProfileRoutes';
@@ -29,8 +26,6 @@ class Server {
     }
 
     routes(): void {
-        this.app.use('/', indexRoutes);
-        this.app.use('/api/games', gamesRoutes);
         this.app.use('/profiles', profileRoutes);
         this.app.use('/active/profile', activeRoutes);
         this.app.use('/edit/profile', editProfileRoutes);

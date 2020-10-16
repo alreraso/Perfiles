@@ -6,9 +6,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const morgan_1 = __importDefault(require("morgan"));
 const cors_1 = __importDefault(require("cors"));
-//import indexRoutes from './routes/indexRoute';
-const indexRoutes_1 = __importDefault(require("./routes/indexRoutes"));
-const gamesRoutes_1 = __importDefault(require("./routes/gamesRoutes"));
 const profileRoutes_1 = __importDefault(require("./routes/profileRoutes"));
 const activeRoutes_1 = __importDefault(require("./routes/activeRoutes"));
 const editProfileRoutes_1 = __importDefault(require("./routes/editProfileRoutes"));
@@ -27,8 +24,6 @@ class Server {
         this.app.use(express_1.default.urlencoded({ extended: false }));
     }
     routes() {
-        this.app.use('/', indexRoutes_1.default);
-        this.app.use('/api/games', gamesRoutes_1.default);
         this.app.use('/profiles', profileRoutes_1.default);
         this.app.use('/active/profile', activeRoutes_1.default);
         this.app.use('/edit/profile', editProfileRoutes_1.default);

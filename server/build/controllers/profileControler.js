@@ -42,19 +42,5 @@ class ProfileControler {
             res.json({ text: 'El perfil fue creado' });
         });
     }
-    update(req, res) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const { id } = req.params;
-            yield database_1.default.query('UPDATE perfiles set ? Where id = ?', [req.body, id]);
-            res.json({ text: 'el perfil fue actualizado' });
-        });
-    }
-    delete(req, res) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const { id } = req.params;
-            yield database_1.default.query('DELETE FROM perfiles Where id = ?', [id]);
-            res.json({ text: 'el perfil fue eliminado' });
-        });
-    }
 }
 exports.profileControlers = new ProfileControler();

@@ -9,7 +9,8 @@ class ActiveRoute{
     }
 
     config(): void{
-        this.router.get('/',activeControllers.index);
+        //this.router.get('/',activeControllers.index);
+        this.router.put('/:id',activeControllers.delete);
     }
 }
 

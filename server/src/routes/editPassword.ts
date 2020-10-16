@@ -9,7 +9,8 @@ class EditPasswordRoute{
     }
 
     config(): void{
-        this.router.get('/',editPasswordControllers.index);
+        //this.router.get('/',editPasswordControllers.index);
+        this.router.put('/:id',editPasswordControllers.update);
     }
 }
 

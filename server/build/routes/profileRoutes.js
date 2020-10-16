@@ -11,8 +11,8 @@ class ProfilerRoute {
         this.router.get('/', profileControler_1.profileControlers.list);
         this.router.get('/:id', profileControler_1.profileControlers.getOne);
         this.router.post('/', profileControler_1.profileControlers.create);
-        this.router.put('/:id', profileControler_1.profileControlers.update);
-        this.router.delete('/:id', profileControler_1.profileControlers.delete);
+        //this.router.put('/:id',profileControlers.update);
+        //this.router.delete('/:id',profileControlers.delete);
     }
 }
 const profilerRoutes = new ProfilerRoute();

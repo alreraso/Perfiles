@@ -9,7 +9,8 @@ class EditProfileRoute{
     }
 
     config(): void{
-        this.router.get('/',editProfileControllers.index);
+        //this.router.get('/',editProfileControllers.index);
+        this.router.put('/:id',editProfileControllers.update);
     }
 }
 

@@ -24,20 +24,7 @@ class ProfileControler {
         await pool.query('INSERT INTO perfiles set ?', [req.body]);
         res.json({text: 'El perfil fue creado'});
     }
-
-    public async update (req:Request,res:Response){
-        const{id}=req.params;
-        await pool.query('UPDATE perfiles set ? Where id = ?',[req.body,id]);        
-        res.json({text: 'el perfil fue actualizado'});
-    } 
-
-    public async delete (req:Request,res:Response){
-        const{id}=req.params;
-        await pool.query('DELETE FROM perfiles Where id = ?',[id]);
-        res.json({text: 'el perfil fue eliminado'});
-    }
-
-       
+      
 
 }
 
