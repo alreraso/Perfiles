@@ -6,8 +6,6 @@ WORKDIR ./
 # Install app dependencies
 COPY package.json .
 RUN npm install -y 
-RUN npm i @types/express @types/morgan @types/cors promise-mysql@3.3.1 typescript
-RUN tsc
 
 # Bundle app source
 COPY . .
