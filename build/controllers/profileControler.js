@@ -29,17 +29,17 @@ class ProfileControler {
                 return res.json(unPerfil[0]);
             }
             else {
-                res.status(404).json({ text: 'el perfil' + req.params.id + 'no existe' });
+                res.status(404).json('el perfil' + req.params.id + 'no existe');
             }
             console.log(unPerfil);
-            res.json({ text: 'perfil encontrado' });
+            res.json('perfil encontrado');
         });
     }
     create(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             console.log(req.body);
             yield database_1.default.query('INSERT INTO perfiles set ?', [req.body]);
-            res.json({ text: 'El perfil fue creado' });
+            res.json('El perfil fue creado');
         });
     }
 }

@@ -23,7 +23,7 @@ class EditProfileControler {
         return __awaiter(this, void 0, void 0, function* () {
             const { id } = req.params;
             yield database_1.default.query('UPDATE perfiles set ? Where id = ?', [req.body, id]);
-            //res.json({text: 'el perfil fue actualizado'});
+            res.json('el perfil fue actualizado');
         });
     }
 }

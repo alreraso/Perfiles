@@ -10,7 +10,7 @@ class EditControler {
     public async update (req:Request,res:Response){
         const{id}=req.params;
         await pool.query('UPDATE perfiles set ? Where id = ?',[req.body,id]);        
-        //res.json({text: 'el perfil fue actualizado'});
+        res.json('La password del perfil fue actualizada');
     } 
 
 }

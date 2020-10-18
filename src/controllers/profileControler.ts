@@ -13,16 +13,16 @@ class ProfileControler {
         if(unPerfil.length > 0){
             return res.json(unPerfil[0]);
         }else{
-            res.status(404).json({text: 'el perfil' + req.params.id + 'no existe'});
+            res.status(404).json('el perfil' + req.params.id + 'no existe');
         }
         console.log(unPerfil);
-        res.json({text: 'perfil encontrado'});
+        res.json('perfil encontrado');
     }
 
     public async create (req:Request,res:Response){
         console.log(req.body);
         await pool.query('INSERT INTO perfiles set ?', [req.body]);
-        res.json({text: 'El perfil fue creado'});
+        res.json('El perfil fue creado');
     }
       
 
