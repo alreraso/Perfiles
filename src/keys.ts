@@ -1,9 +1,9 @@
 export default {
 
     database: {
-        host: 'localhost',//'perfiles.cwxo0rge9pcm.us-east-1.rds.amazonaws.com', //use in aws database node
+        host: 'perfiles.cwxo0rge9pcm.us-east-1.rds.amazonaws.com', //use in aws database node
         user: 'root',
-        password: 'password',
+        password: 'Rene1234$',
         database: 'perfiles_db'
     }
 
